@@ -1,0 +1,10 @@
+mode=single_run
+strategy=dfs
+instance_file=data/tsp/burma14.tsp
+# opt_tour_file=data/opt_tour/ulysses16.opt.tour
+single_opt_cost=3323
+use_rnn_upper_bound=true
+output_csv=results/single_runs/single_dfs_burma14.csv
+progress=true
+show_matrix=true
+time_limit_ms=900000

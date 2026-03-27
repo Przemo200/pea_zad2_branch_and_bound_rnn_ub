@@ -1,0 +1,14 @@
+mode=benchmark_random
+generated_type=TSP
+strategy=all
+use_rnn_upper_bound=true
+min_n=6
+max_n=14
+instances_per_size=20
+weight_min=1
+weight_max=1000
+seed=12345
+time_limit_ms=900000
+memory_limit_mb=16384
+output_csv=results/random_benchmarks/random_tsp.csv
+progress=true

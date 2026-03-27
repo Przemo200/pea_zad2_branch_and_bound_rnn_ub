@@ -1,0 +1,9 @@
+mode=single_run
+strategy=lc
+instance_file=data/macierze_testowe/matrix_6x6.atsp
+single_opt_cost=150
+use_rnn_upper_bound=true
+output_csv=results/single_runs/single_lc_matrix6.csv
+progress=true
+show_matrix=true
+time_limit_ms=900000

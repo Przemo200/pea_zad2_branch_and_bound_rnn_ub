@@ -1,0 +1,9 @@
+# nazwa;sciezka_do_instancji;opcjonalny_pusty_plik_opt_tour;opt_cost
+
+br17;data/atsp/br17.atsp;;39
+ftv33;data/atsp/ftv33.atsp;;1286
+ftv35;data/atsp/ftv35.atsp;;1473
+ftv38;data/atsp/ftv38.atsp;;1530
+ftv44;data/atsp/ftv44.atsp;;1613
+
+

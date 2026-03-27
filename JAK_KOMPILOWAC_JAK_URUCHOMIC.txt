@@ -1,0 +1,22 @@
+1. KOMPILACJA
+
+Z katalogu glownego projektu:
+
+mkdir -p build
+cd build
+cmake ..
+cmake --build . -j
+
+2. URUCHOMIENIE
+
+Z katalogu glownego projektu:
+
+./build/pea_zad2 config/00_test_read.txt
+./build/pea_zad2 config/01_single_bb_bfs_atsp_matrix6.txt
+./build/pea_zad2 config/09_random_benchmark_tsp.txt
+./build/pea_zad2 config/11_tsplib_benchmark_tsp.txt
+./build/pea_zad2 config/13_compare_ub_random_tsp.txt
+
+- Wszystkie configi zakladaja uruchomienie z katalogu glownego projektu
+
+- Dla pomiarow czasu warto uruchamiac na stalej czestotliwosci rdzenia i przypinac proces przez taskset

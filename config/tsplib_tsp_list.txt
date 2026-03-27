@@ -1,0 +1,9 @@
+# nazwa;sciezka_do_instancji;sciezka_do_opt_tour;opcjonalny_opt_cost
+
+burma14;data/tsp/burma14.tsp;;3323
+gr17;data/tsp/gr17.tsp;;2085
+ulysses16;data/tsp/ulysses16.tsp;data/opt_tour/ulysses16.opt.tour
+ulysses22;data/tsp/ulysses22.tsp;data/opt_tour/ulysses22.opt.tour
+gr24;data/tsp/gr24.tsp;data/opt_tour/gr24.opt.tour
+
+

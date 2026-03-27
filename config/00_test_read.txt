@@ -1,0 +1,4 @@
+mode=test_read
+instance_file=data/macierze_testowe/matrix_6x6.atsp
+show_matrix=true
+progress=true

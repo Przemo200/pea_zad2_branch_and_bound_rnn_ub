@@ -1,0 +1,9 @@
+mode=benchmark_tsplib
+strategy=all
+use_rnn_upper_bound=true
+list_file=config/tsplib_atsp_list.txt
+seed=12345
+time_limit_ms=900000
+memory_limit_mb=16384
+output_csv=results/tsplib_benchmarks/tsplib_atsp.csv
+progress=false
