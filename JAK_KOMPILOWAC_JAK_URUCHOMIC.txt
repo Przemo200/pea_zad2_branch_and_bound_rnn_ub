@@ -1,22 +1,26 @@
-1. KOMPILACJA
+W katalogu projektu
 
-Z katalogu glownego projektu:
+sudo cpupower -c 3 frequency-set -d 3700MHz
+sudo cpupower -c 3 frequency-set -u 3700MHz
 
+cpupower -c 3 frequency-info -p
+cpupower -c 3 frequency-info -f
+
+Kompilacja projektu
+----------------------
 mkdir -p build
-cd build
-cmake ..
-cmake --build . -j
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j
 
-2. URUCHOMIENIE
 
-Z katalogu glownego projektu:
+Uruchamiac z glownego folderu projektu
+--------------------------------------
 
-./build/pea_zad2 config/00_test_read.txt
-./build/pea_zad2 config/01_single_bb_bfs_atsp_matrix6.txt
-./build/pea_zad2 config/09_random_benchmark_tsp.txt
-./build/pea_zad2 config/11_tsplib_benchmark_tsp.txt
-./build/pea_zad2 config/13_compare_ub_random_tsp.txt
+Przykłady
 
-- Wszystkie configi zakladaja uruchomienie z katalogu glownego projektu
-
-- Dla pomiarow czasu warto uruchamiac na stalej czestotliwosci rdzenia i przypinac proces przez taskset
+taskset -c 3 ./build/pea_zad2 config/09_random_benchmark_tsp.txt
+taskset -c 3 ./build/pea_zad2 config/10_random_benchmark_atsp.txt
+taskset -c 3 ./build/pea_zad2 config/11_tsplib_benchmark_tsp.txt
+taskset -c 3 ./build/pea_zad2 config/12_tsplib_benchmark_atsp.txt
+taskset -c 3 ./build/pea_zad2 config/13_compare_ub_random_tsp.txt
+taskset -c 3 ./build/pea_zad2 config/14_compare_ub_random_atsp.txt
