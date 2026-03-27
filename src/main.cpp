@@ -266,6 +266,7 @@ static void runSingle(const Config& config) {
         printProgress(config.progress, step, static_cast<int>(strategies.size()),
                       BranchAndBoundSolver::strategyToString(strategy));
 
+        // ub i wynik z wyliczeniem ub
         InitialUpperBound ub = computeInitialUb(instance, config.use_rnn_upper_bound);
         BranchAndBoundResult result = solveWithLimits(instance, strategy, ub, config);
         long rss = result.peakRssKb;
@@ -311,6 +312,7 @@ static void runBenchmarkRandom(const Config& config, bool compareUb) {
                                   BranchAndBoundSolver::strategyToString(strategy) +
                                   " UB=" + std::string(useRnnUb ? "rnn_ties" : "none"));
 
+                    // ub i wynik z liczeniem ub
                     InitialUpperBound ub = computeInitialUb(instance, useRnnUb);
                     BranchAndBoundResult result = solveWithLimits(instance, strategy, ub, config);
                     long rss = result.peakRssKb;
@@ -408,6 +410,7 @@ static void runBenchmarkTsplib(const Config& config, bool compareUb) {
                               entry.name + " " + BranchAndBoundSolver::strategyToString(strategy) +
                               " UB=" + std::string(useRnnUb ? "rnn_ties" : "none"));
 
+                // ub i wynik z liczeniem ub
                 InitialUpperBound ub = computeInitialUb(instance, useRnnUb);
                 BranchAndBoundResult result = solveWithLimits(instance, strategy, ub, config);
                 long rss = result.peakRssKb;
